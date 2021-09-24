@@ -16,10 +16,10 @@ public class PlayerLook : MonoBehaviour
 
     void Look()
     {
-        float inputX = Input.GetAxisRaw("Mouse X");
-        float inputY = Input.GetAxisRaw("Mouse Y");
-        x += inputX * xSensitivity;
-        y += inputY * ySensitivity;
+        float inptX = Input.GetAxisRaw("Mouse X");
+        float inptY = Input.GetAxisRaw("Mouse Y");
+        x += inptX * xSensitivity;
+        y += inptY * ySensitivity;
         if (y > yMaximumAngle) y = yMaximumAngle;
         else if (y < yMinimumAngle) y = yMinimumAngle;
         transform.rotation = Quaternion.Euler(y, x, 0.0f);
